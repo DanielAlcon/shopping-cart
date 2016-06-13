@@ -13,9 +13,13 @@ var orange = new Fruta ("orange", 0.8, 2);
 var kiwi = new Fruta("kiwi", 1.2, 1);
 var frutas = [banana, orange, kiwi]
 
-var precioTotal = [banana.totalPriceFruit(), orange.totalPriceFruit(), kiwi.totalPriceFruit()].reduce(function(prevPrice,curPrice){
-	return prevPrice + curPrice;
-});
+function addFruit (fruit) {
+	frutas.push(fruit);
+};
+
+var precioTotal = frutas.reduce(function(memo,fruit){
+	return memo + fruit.totalPriceFruit();
+}, 0);
 
 var total= function (fruta1, fruta2, fruta3) {
     console.log (fruta1.amount + " " + fruta1.name + " " + fruta1.price + " " + fruta1.totalPriceFruit());
@@ -27,7 +31,9 @@ var total= function (fruta1, fruta2, fruta3) {
 
 // funcion mostrar
 function showFruits () {
-	frutas.forEach()
+	for each (Fruta in frutas){
+		console.log(name)
+	};
 };
 
 
